@@ -1,5 +1,4 @@
 var mysql = require('mysql');
-
 // Criando uma conexão
 
 var con = mysql.createConnection({
@@ -11,8 +10,8 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
     if (err) throw err;
-    var nome = "Google";
-    var endereco = "Los Angeles";
+    var nome = "Bruna";
+    var endereco = "Fortaleza";
     // Inserindo dados 
     var sql = `INSERT INTO clientes (nome, endereco) VALUES ('${nome}', '${endereco}')`;
     con.query(sql, function (err, result) {
